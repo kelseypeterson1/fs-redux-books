@@ -1,7 +1,20 @@
+import axios from 'axios';
 import {useSelector} from 'react-redux'
+import { useDispatch } from 'react-redux';
 
 function BookList() {
   const bookList = useSelector(store => store.bookList);
+
+  const dispatch = useDispatch();
+
+  // // make the async request
+  // axios.get('/stuff').then((response) => {
+  //   // then when response comes back, update redux
+  //   dispatch({
+  //     type:'SET_STUFF',
+  //     payload: response.data
+  //   })
+  // })
 
   return (
     <section>
